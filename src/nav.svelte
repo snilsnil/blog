@@ -1,20 +1,20 @@
 <div class="header">
     <div>
-        <input class="menu" type="image" on:click={fadein} src="/menu.png" alt="메뉴">
+        <input class="menu" type="image" on:click={fadein} src="menu.png" alt="메뉴">
         <input class="home" type="image" on:click={()=>{window.history.pushState("","","/");}}
-        src="/icon.png" alt="홈페이지">
+        src="icon.png" alt="홈페이지">
     </div>
 
     <div class="nav">
             <input class="github_snilsnil" type="image" on:click={()=>{
                 window.location.href="https://github.com/snilsnil";
-            }} src="/github.png" alt="깃허브">
+            }} src="github.png" alt="깃허브">
 
             <input class="search_text" type="text" bind:value={text} placeholder="search" on:keypress={keyPress}>
 
             <input class="search_btn" type="image" on:click={()=>{
                 console.log(text);
-            }} src="/search.png" alt="검색">
+            }} src="search.png" alt="검색">
 
 
     </div>
@@ -22,7 +22,7 @@
 
 <div  class="{fade} category">
     <div class="category_top">
-        <input class="close" type="image" on:click={fadeout} src="/close.png" alt="닫기">
+        <input class="close" type="image" on:click={fadeout} src="close.png" alt="닫기">
     </div>
 </div>
 
