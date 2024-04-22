@@ -1,7 +1,7 @@
 <div class="header">
     <div>
         <input class="menu" type="image" on:click={fadein} src="menu.png" alt="메뉴">
-        <input class="home" type="image" on:click={()=>{window.history.pushState("","","/");}}
+        <input class="home" type="image" on:click={()=>{window.history.pushState("","",rootpath);}}
         src="icon.png" alt="홈페이지">
     </div>
 
@@ -30,6 +30,7 @@
 <script>
     let text;
     let fade;
+    const rootpath="/blog/";
 
     const fadein=()=>{
         fade='fadein';
