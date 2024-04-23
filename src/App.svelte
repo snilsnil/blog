@@ -1,17 +1,20 @@
 <script>
-  import Nav from './nav.svelte';
-  let name = 'snilsnil';
+  import Header from './header.svelte';
+  import Main from './main.svelte';
+
+  const rootpath="/blog/";
   // import Btn from './btnExample.svelte';
 
   const post = {
           title: "네이버",
-          content: "<a href='https://naver.com'>네이버</a>"
+          content: "<a href='https://Headerer.com'>네이버</a>"
   }
 
 </script>
 
 
   <!-- <h1>Hi! I'm {name}</h1> -->
-  <Nav />
+  <Header rootpath={rootpath} />
+  <Main rootpath={rootpath} />
   <!-- <p>{@html post.content}</p>
   <Btn /> -->
