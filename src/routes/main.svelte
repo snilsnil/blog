@@ -1,5 +1,4 @@
 <script>
-    export let rootpath;
     const box={
         contant:[
             {
