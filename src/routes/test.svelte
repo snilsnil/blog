@@ -1,7 +1,7 @@
 <script>
     export let rootpath;
     const loading=async function(){
-        return await (await fetch(`${rootpath}test.json`)).json();
+        return await (await fetch(`${rootpath}test2.json`)).json();
     }
 </script>
 

@@ -1,7 +1,7 @@
 <div class="header">
         <div>
                 <input class="menu" type="image" on:click={fadein} src="menu.png" alt="메뉴">
-                <a href="{rootpath}" use:link>
+                <a href="{rootpath}" >
                         <input class="home" type="image" src="icon.png" alt="홈페이지">
                 </a>  
         </div>
@@ -18,17 +18,18 @@
                 }} src="search.png" alt="검색">
         </div>
 </div>
-
 <div  class="{fade} category">
-        <div class="category_top">     
-                <input class="close" type="image" on:click={fadeout} src="close.png" alt="닫기"> 
-                <a href="{rootpath}" use:link>
-                        <input class="category_home" type="image" src="icon.png" alt="홈페이지">
-                </a>  
-                <a href="{rootpath}story" use:link>
-                        스토리
-                </a> 
-                
+                <div class="category_top">     
+                        <input class="close" type="image" on:click={fadeout} src="close.png" alt="닫기"> 
+                        <a href="{rootpath}" use:link>
+                                <input class="category_home" type="image" src="icon.png" alt="홈페이지">
+                        </a>  
+                        <a href="{rootpath}story" use:link>
+                                스토리
+                        </a> 
+                        <a href="{rootpath}test" use:link>
+                                테스트
+                        </a> 
         </div>
 </div>
 
@@ -42,12 +43,12 @@
 
         const fadein=()=>{
                 fade='fadein';
-                const category=document.getElementsByClassName('category')[0];
+                const category=document.getElementsByClassName('category');
         }
 
         const fadeout=()=>{
                 fade='fadeout'
-                const category=document.getElementsByClassName('category')[0];
+                const category=document.getElementsByClassName('category');
         }
 
         const keyPress=(e)=>{
@@ -78,7 +79,7 @@
   margin-left: 0px;
   width:300px;
   display: block;
-  position: absolute;
+  position: fixed;
   left: -300px;
   top: 0;
   height:100%;
@@ -167,11 +168,14 @@
   }
 
   .header{
+  background-color: white;
   border-bottom: 1px solid black;
-  margin-top: 10px;
+  padding-top:10px;
   margin-left:0px;
   margin-right:0px;
   padding-bottom: 10px;
+  position:sticky;
+  top:0px;
   display: flex;
   justify-content: space-between;
   }

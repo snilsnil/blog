@@ -4,25 +4,23 @@
   import Header from './header.svelte';
   import Home from './routes/main.svelte';
   import Story from './routes/story.svelte';
+  import Test from './routes/test.svelte';
 
   export let url='';
 
   const rootpath="/blog/";
-  // import Btn from './btnExample.svelte';
-
-  const post = {
-          title: "네이버",
-          content: "<a href='https://Headerer.com'>네이버</a>"
-  }
 
 </script>
 <Header rootpath={rootpath} />
 <Router url="{url}">
   <Route path='{rootpath}'>
-    <Home />
+    <Home  rootpath={rootpath}/>
   </Route>
   <Route path='{rootpath}story'>
-    <Story />
+    <Story rootpath={rootpath} />
+  </Route>
+  <Route path='{rootpath}test'>
+    <Test rootpath={rootpath} />
   </Route>
 </Router>
   <!-- <h1>Hi! I'm {name}</h1> -->
