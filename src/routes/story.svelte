@@ -1,7 +1,7 @@
 <script>
     export let rootpath;
     const loading=async function(){
-        return await (await fetch(`${rootpath}test.json`)).json();
+        return await (await fetch(`${rootpath}test2.json`)).json();
     }
 </script>
 
@@ -13,11 +13,9 @@
     {:then cont}
         {#each cont.contant as {title, text}}
         <div class="contant_box">
-            <h1>{title}</h1>
-            <div class="contant">
-                <img src="" alt="사진">
-                {text}
-            </div>
+            <img class="imag" src="{rootpath}icon.png" alt="사진">
+            <p class="title">{title}</p><br>
+            <p class="text">{text}</p>
         </div>
         {/each}
     {/await}
@@ -26,7 +24,7 @@
 
 <style>
 
-    .main{
+.main{
         margin: auto auto;
         margin-top: 100px;
     }
@@ -38,5 +36,37 @@
         border: 1px solid black;
         border-radius: 1em;
         text-align: center;
+    }
+
+    .imag{
+        float: left;
+        margin-right: 20px;
+        width:25%;
+        height: 100%;
+        display: inline;
+    }
+
+    .title{
+        text-align: center;
+        display: block;
+        font-size: 2em;
+        margin-block-start: 1.5em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+
+    .text{
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        text-align: left;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
     }
 </style>

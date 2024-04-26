@@ -1,36 +1,42 @@
 <div class="header">
         <div>
-                <input class="menu" type="image" on:click={fadein} src="menu.png" alt="메뉴">
+                <input class="menu" type="image" on:click={fadein} src="{rootpath}menu.png" alt="메뉴">
                 <a href="{rootpath}" >
-                        <input class="home" type="image" src="icon.png" alt="홈페이지">
+                        <input class="home" type="image" src="{rootpath}icon.png" alt="홈페이지">
                 </a>  
         </div>
 
         <div class="nav">
                 <input class="github_snilsnil" type="image" on:click={()=>{
                 window.location.href="https://github.com/snilsnil";
-                }} src="github.png" alt="깃허브">
+                }} src="{rootpath}github.png" alt="깃허브">
 
                 <input class="search_text" type="text" bind:value={text} placeholder="search" on:keypress={keyPress}>
 
                 <input class="search_btn" type="image" on:click={()=>{
                 console.log(text);
-                }} src="search.png" alt="검색">
+                }} src="{rootpath}search.png" alt="검색">
         </div>
 </div>
-<div  class="{fade} category">
-                <div class="category_top">     
-                        <input class="close" type="image" on:click={fadeout} src="close.png" alt="닫기"> 
-                        <a href="{rootpath}" use:link>
-                                <input class="category_home" type="image" src="icon.png" alt="홈페이지">
-                        </a>  
-                        <a href="{rootpath}story" use:link>
+<div  class="{fade} category">   
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+                <p class="close" on:click={fadeout}>닫기</p>
+                <div>
+                        <a href="{rootpath}">
+                                메인
+                        </a><br>
+                </div>
+                <div>
+                        <a href="{rootpath}story">
                                 스토리
-                        </a> 
-                        <a href="{rootpath}test" use:link>
+                        </a><br>
+                </div>
+                <div>
+                        <a href="{rootpath}test">
                                 테스트
-                        </a> 
-        </div>
+                        </a><br>
+                </div>
 </div>
 
 
@@ -61,37 +67,39 @@
 
 <style>
 
-.category_top{
-  margin-left: 0px;
-  width: 100%;
+.close{
+        border: 1px solid black;
+        border-radius: 1em;
+        width: 220px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        text-align: center;
+        font-size: 30px;
 }
 
-.close{
-  margin:5px;
-  float: right;
-  border: 0em;
-  width: 48px;
-  height: 48px;
+.category div{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        display: block;
+        border: 1px solid black;
+        border-radius: 1em;
+        width: 220px;
+        font-size: 30px;
 }
 
 .category{
   border-right: 1px solid black;
+  text-align: center;
   margin-left: 0px;
   width:300px;
-  display: block;
   position: fixed;
   left: -300px;
   top: 0;
   height:100%;
   background-color: white;
 }
-
-  .category_home{
-  margin:5px;
-  border: 0em;
-  width: 48px;
-  height: 48px;
-  }
 
 .fadein{
   animation-name: move;
@@ -174,7 +182,8 @@
   margin-left:0px;
   margin-right:0px;
   padding-bottom: 10px;
-  position:sticky;
+  position:fixed;
+  width: 100%;
   top:0px;
   display: flex;
   justify-content: space-between;

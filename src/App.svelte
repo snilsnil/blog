@@ -5,6 +5,7 @@
   import Home from './routes/main.svelte';
   import Story from './routes/story.svelte';
   import Test from './routes/test.svelte';
+  import Test_id from './routes/test_id.svelte'
 
   export let url='';
 
@@ -22,6 +23,7 @@
   <Route path='{rootpath}test'>
     <Test rootpath={rootpath} />
   </Route>
+  <Route path='{rootpath}test/:id' component={Test_id} rootpath={rootpath}/>
 </Router>
   <!-- <h1>Hi! I'm {name}</h1> -->
   

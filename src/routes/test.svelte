@@ -1,7 +1,8 @@
 <script>
+    import {link} from 'svelte-routing';
     export let rootpath;
     const loading=async function(){
-        return await (await fetch(`${rootpath}test2.json`)).json();
+        return await (await fetch(`${rootpath}test.json`)).json();
     }
 </script>
 
@@ -11,13 +12,11 @@
         여기는 파일이 불러올때 띄울 메세지를 적는다
     -->
     {:then cont}
-        {#each cont.contant as {title, text}}
+        {#each cont.contant as {id,title, text}}
         <div class="contant_box">
-            <h1>{title}</h1>
-            <div class="contant">
-                <img src="" alt="사진">
-                {text}
-            </div>
+            <img class="imag" src="{rootpath}icon.png" alt="사진">
+            <a href="{rootpath}test/{id}" class="title">{title}</a><br>
+            <p class="text">{text}</p>
         </div>
         {/each}
     {/await}
@@ -26,7 +25,7 @@
 
 <style>
 
-    .main{
+.main{
         margin: auto auto;
         margin-top: 100px;
     }
@@ -38,5 +37,37 @@
         border: 1px solid black;
         border-radius: 1em;
         text-align: center;
+    }
+
+    .imag{
+        float: left;
+        margin-right: 20px;
+        width:25%;
+        height: 100%;
+        display: inline;
+    }
+
+    .title{
+        text-align: center;
+        display: block;
+        font-size: 2em;
+        margin-block-start: 1.5em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+
+    .text{
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        text-align: left;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
     }
 </style>
