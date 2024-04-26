@@ -14,15 +14,9 @@
 </script>
 <Header rootpath={rootpath} />
 <Router url="{url}">
-  <Route path='{rootpath}'>
-    <Home  rootpath={rootpath}/>
-  </Route>
-  <Route path='{rootpath}story'>
-    <Story rootpath={rootpath} />
-  </Route>
-  <Route path='{rootpath}test'>
-    <Test rootpath={rootpath} />
-  </Route>
+  <Route path='{rootpath}' component={Home} rootpath={rootpath}/>
+  <Route path='{rootpath}story' component={Story} rootpath={rootpath}/>
+  <Route path='{rootpath}test' component={Test} rootpath={rootpath}/>
   <Route path='{rootpath}test/:id' component={Test_id} rootpath={rootpath}/>
 </Router>
   <!-- <h1>Hi! I'm {name}</h1> -->

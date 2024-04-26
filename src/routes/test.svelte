@@ -15,7 +15,7 @@
         {#each cont.contant as {id,title, text}}
         <div class="contant_box">
             <img class="imag" src="{rootpath}icon.png" alt="사진">
-            <a href="{rootpath}test/{id}" class="title">{title}</a><br>
+            <a href="{rootpath}test/{id}" use:link class="title">{title}</a><br>
             <p class="text">{text}</p>
         </div>
         {/each}

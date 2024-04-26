@@ -28,12 +28,12 @@
                         </a><br>
                 </div>
                 <div>
-                        <a href="{rootpath}story">
+                        <a href="{rootpath}story" use:link>
                                 스토리
                         </a><br>
                 </div>
                 <div>
-                        <a href="{rootpath}test">
+                        <a href="{rootpath}test" use:link>
                                 테스트
                         </a><br>
                 </div>
