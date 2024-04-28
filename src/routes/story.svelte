@@ -1,4 +1,5 @@
 <script>
+    import {link} from 'svelte-routing';
     export let rootpath;
     const loading=async function(){
         return await (await fetch(`${rootpath}test2.json`)).json();
@@ -11,10 +12,10 @@
         여기는 파일이 불러올때 띄울 메세지를 적는다
     -->
     {:then cont}
-        {#each cont.contant as {title, text}}
+        {#each cont.contant as {id, title, text}}
         <div class="contant_box">
             <img class="imag" src="{rootpath}icon.png" alt="사진">
-            <p class="title">{title}</p><br>
+            <a href="{rootpath}story/{id}" use:link class="title">{title}</a><br>
             <p class="text">{text}</p>
         </div>
         {/each}

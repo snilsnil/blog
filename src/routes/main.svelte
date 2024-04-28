@@ -1,11 +1,12 @@
 <script>
+    import {link} from 'svelte-routing';
     export let rootpath;
     let main;
     const loading=async function(){
         let test=await (await fetch(`${rootpath}test.json`)).json();
         let story=await (await fetch(`${rootpath}test2.json`)).json();
         main=mergeObjects(test, story)
-        console.log(main);
+        // console.log(main);
         return main;
     }
 
@@ -26,6 +27,7 @@
             }
         }
 
+        mergedObj.contant.sort((a, b) => a.count - b.count);
         return mergedObj;
     }
     
@@ -37,11 +39,11 @@
         여기는 파일이 불러올때 띄울 메세지를 적는다
     -->
     {:then cont}
-        {#each cont.contant as {title, text}}
+        {#each cont.contant as {id, type, title, text}}
         <div class="contant_box">
-                <img class="imag" src="{rootpath}icon.png" alt="사진">
-                <p class="title">{title}</p><br>
-                <p class="text">{text}</p>
+            <img class="imag" src="{rootpath}icon.png" alt="사진">
+            <a href="{rootpath}{type}/{id}" use:link class="title">{title}</a><br>
+            <p class="text">{text}</p>
         </div>
         {/each}
     {/await}

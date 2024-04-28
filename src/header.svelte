@@ -68,6 +68,7 @@
 <style>
 
 .close{
+        cursor: pointer;
         border: 1px solid black;
         border-radius: 1em;
         width: 220px;
