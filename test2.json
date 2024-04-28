@@ -1,23 +1,17 @@
 {
   "contant": [
     {
-      "type": "story",
       "id": 1,
-      "count": 2,
       "title": " 스토리입니다",
       "text": "스토리 중입니다."
     },
     {
-      "type": "story",
       "id": 2,
-      "count": 4,
       "title": " 스토리입니다2",
       "text": "스토리 중입니다."
     },
     {
-      "type": "story",
       "id": 3,
-      "count": 6,
       "title": " 스토리입니다3",
       "text": "스토리 중입니다."
     }
