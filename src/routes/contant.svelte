@@ -7,7 +7,7 @@
     let contant;
     
     const loading=async function(){
-        let json=await (await fetch(`${rootpath}test.json`)).json();
+        let json=await (await fetch('https://snilsnil.github.io/blog_json/test.json')).json();
         for(let i=0; i<json.contant.length;i++){
             if(id==json.contant[i].id && type==json.contant[i].type){
                 title=json.contant[i].title
