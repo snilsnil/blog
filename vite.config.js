@@ -1,14 +1,20 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
-import adapter from '@sveltejs/adapter-static'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [svelte()],
   base: "/blog/",
   publicDir: 'public',
-  kit: {
-    adapter: adapter(),
-    // 기타 설정
+  build: {
+    // Add 404.html to the build output
+    emptyOutDir: true, // Ensure outDir is cleaned before build
+    rollupOptions: {
+      input: {
+        main: './index.html',
+        // Add 404.html as an input file
+        '404': './404.html'
+      }
+    }
   }
 })
