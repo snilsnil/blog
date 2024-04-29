@@ -1,6 +1,7 @@
 <script>
     export let rootpath;
     export let id;
+    export let type;
     let title;
     let text;
     let contant;
@@ -8,7 +9,7 @@
     const loading=async function(){
         let json=await (await fetch(`${rootpath}test.json`)).json();
         for(let i=0; i<json.contant.length;i++){
-            if(id==json.contant[i].id){
+            if(id==json.contant[i].id && type==json.contant[i].type){
                 title=json.contant[i].title
                 text=json.contant[i].text
             }
