@@ -12,10 +12,10 @@
   const rootpath="/blog/";
 
 </script>
-<Header rootpath={rootpath} />
 <Router url="{url}">
+  <Header rootpath={rootpath} />
   <Route path='{rootpath}' component={Home} rootpath={rootpath}/>
-  <Route path='{rootpath}story' component={Story} rootpath={rootpath}/>
+  <Route path='{rootpath}story' component={Story} rootpath={rootpath} />
   <Route path='{rootpath}test' component={Test} rootpath={rootpath}/>
   <Route path='{rootpath}:type/:id' component={Contant} rootpath={rootpath}/>
 </Router>

@@ -1,5 +1,4 @@
 <script>
-    export let rootpath;
     export let id;
     export let type;
     let title;
@@ -40,12 +39,14 @@
     }
 
     .contant_box{
+        
         margin: auto auto 50px;
         width:70%;
         height:300px;
         text-align: center;
     }
     .contant_text{
+        white-space: normal;
         font-family: 'malgun';
     }
 </style>

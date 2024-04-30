@@ -2,10 +2,11 @@
     import {link} from 'svelte-routing';
     export let rootpath;
     const loading=async function(){
-        let json = await (await fetch('https://snilsnil.github.io/blog_json/test.json')).json();
-        json.contant.sort((a, b) =>b.count - a.count);
-        return json
+        let json1 = await (await fetch('https://snilsnil.github.io/blog_json/test.json')).json();
+        json1.contant.sort((a, b) =>b.count - a.count);
+        return json1
     }
+    
 </script>
 
 <div class="main">

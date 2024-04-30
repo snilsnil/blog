@@ -79,6 +79,10 @@
         font-size: 30px;
 }
 
+a{
+        width: 100%;
+}
+
 .category div{
         margin-top: 20px;
         margin-bottom: 20px;
@@ -96,7 +100,7 @@
   margin-left: 0px;
   width:300px;
   position: fixed;
-  left: -300px;
+  left: -301px;
   top: 0;
   height:100%;
   background-color: white;
@@ -128,7 +132,7 @@
         left: 0px;
   }
   0% {
-        left: -300px;
+        left: -301px;
   }
   }
 
