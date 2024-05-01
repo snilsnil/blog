@@ -3,7 +3,6 @@
 
     let title = '';
     let text = '';
-    import { base } from '$app/paths';
     // content를 props로 받아와서 사용
     import { onMount } from 'svelte';
 
@@ -21,8 +20,10 @@
 
 <div class="main">
     <div class="contant_box">
-        <h1>{title}</h1>
-        <pre class="contant_text">{@html text}</pre>
+        <h1 style="text-align: center;">{title}</h1>
+        <div class="contant_text_container">
+            <pre class="contant_text">{@html text}</pre>
+        </div>
     </div>
 </div>
 
@@ -35,11 +36,15 @@
     .contant_box {
         margin: auto auto 50px;
         width: 70%;
-        height: 300px;
-        text-align: center;
+    }
+
+    .contant_text_container {
+        overflow: auto; /* 내용이 넘칠 경우 스크롤 표시 */
     }
 
     .contant_text {
         font-family: 'malgun';
+        white-space: pre-wrap; /* 줄 바꿈 처리 */
     }
 </style>
+
