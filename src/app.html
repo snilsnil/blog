@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>
+<style>
+  @font-face {
+    font-family: "malgun";
+    src: url("./public/malgun.tff") format("font-woff2");
+  }
+  body {
+    margin: 0px 0px 0px;
+    font-family: "malgun";
+  }
+  a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 글자색 상속 */
+  }
+</style>
