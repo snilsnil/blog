@@ -40,8 +40,6 @@
     }
 
     .contant_text {
-        text-align: left;
-        white-space: normal;
         font-family: 'malgun';
     }
 </style>
