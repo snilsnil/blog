@@ -1,5 +1,6 @@
 <script>
     export let data;
+    // @ts-ignore
     import { base } from '$app/paths';
 </script>
 

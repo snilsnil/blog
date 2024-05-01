@@ -4,7 +4,7 @@
 	import Header from './Header.svelte';
 </script>
 <svelte:head>
-	<title>blog</title>
+	<title>snilsnil'blog</title>
 </svelte:head>
 
 <div class="app">

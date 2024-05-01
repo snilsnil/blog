@@ -1,4 +1,5 @@
 <script>
+    // @ts-ignore
     import { base } from '$app/paths';
     const loading=async function(){
         let json = await (await fetch('https://snilsnil.github.io/blog_json/test.json')).json();
