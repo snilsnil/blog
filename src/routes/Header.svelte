@@ -11,11 +11,8 @@
 			window.location.href="https://github.com/snilsnil";
 			}} src="{base}/github.png" alt="깃허브">
 
-			<input class="search_text" type="text" bind:value={text} placeholder="search" on:keypress={keyPress}>
-
-			<input class="search_btn" type="image" on:click={()=>{
-			console.log(text);
-			}} src="{base}/search.png" alt="검색">
+			<input class="search_text" type="text" on:input={updateText} placeholder="search" >
+                        <!-- on:keypress={keyPress} -->
 	</div>
 </div>
 <div  class="{fade} category">
@@ -41,34 +38,32 @@
 
 
 <script>
+// @ts-nocheck
+
         // let rootpath='/testblog/'
         import { base } from '$app/paths';
-        /**
-   * @type {any}
-   */
-        let text;
+        // @ts-ignore
+        import { textForm } from './store.js';
         /**
    * @type {string}
    */
         let fade;
 
+        
+        /**
+   * @param {{ target: { value: string; }; }} event
+   */
+        function updateText(event) {
+                textForm.set(event.target.value)
+        }
+
         const fadein=()=>{
                 fade='fadein';
-                // @ts-ignore
-                const category=document.getElementsByClassName('category');
         }
 
         const fadeout=()=>{
                 fade='fadeout'
-                // @ts-ignore
-                const category=document.getElementsByClassName('category');
         }
-
-        const keyPress=(/** @type {{ key: string; }} */ e)=>{
-                if(e.key=='Enter'){
-                console.log(text);
-        }
-}
 
 </script>
 

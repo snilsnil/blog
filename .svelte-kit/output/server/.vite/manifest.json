@@ -13,6 +13,13 @@
     "file": "chunks/exports.js",
     "name": "exports"
   },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
   "_internal.js": {
     "file": "chunks/internal.js",
     "name": "internal",
@@ -47,7 +54,7 @@
     "imports": [
       "_paths.js",
       "_exports.js",
-      "_ssr.js",
+      "_index.js",
       "_internal.js"
     ]
   },
@@ -64,10 +71,11 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_paths.js"
+      "_paths.js",
+      "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CGfZ5M0_.css"
+      "_app/immutable/assets/_layout.NoLKdpfa.css"
     ]
   },
   "src/routes/+page.server.js": {

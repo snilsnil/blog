@@ -1,4 +1,4 @@
-import { c as create_ssr_component, i as is_promise, n as noop, f as each, e as escape } from "../../../chunks/ssr.js";
+import { c as create_ssr_component, i as is_promise, n as noop, b as each, e as escape } from "../../../chunks/ssr.js";
 import { b as base } from "../../../chunks/paths.js";
 const css = {
   code: ".main.svelte-12hu38f{margin:auto auto;margin-top:100px}.contant_box.svelte-12hu38f{margin:auto auto 50px;width:70%;height:300px;border:1px solid black;border-radius:1em;text-align:center}.imag.svelte-12hu38f{float:left;margin-right:20px;width:25%;height:100%;display:inline}.title.svelte-12hu38f{text-align:center;display:block;font-size:2em;margin-block-start:1.5em;margin-block-end:0em;margin-inline-start:0px;margin-inline-end:0px;font-weight:bold;unicode-bidi:isolate}.text.svelte-12hu38f{font-size:16px;overflow:hidden;text-overflow:ellipsis;white-space:normal;text-align:left;word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical}",
