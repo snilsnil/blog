@@ -56,7 +56,6 @@
    */
         function updateText(event) {
                 textForm.set(event.target.value)
-                console.log(event.target.value)
         }
 
         const fadein=()=>{
