@@ -11,7 +11,7 @@
 			window.location.href="https://github.com/snilsnil";
 			}} src="{base}/github.png" alt="깃허브">
 
-			<input class="search_text" type="text" on:input={updateText} placeholder="search" >
+			<input class="search_text" type="text"  bind:value={text} on:input={updateText} placeholder="search" >
                         <!-- on:keypress={keyPress} -->
 	</div>
 </div>
@@ -48,6 +48,7 @@
    * @type {string}
    */
         let fade;
+        let text
 
         
         /**
@@ -55,6 +56,7 @@
    */
         function updateText(event) {
                 textForm.set(event.target.value)
+                console.log(event.target.value)
         }
 
         const fadein=()=>{
@@ -64,6 +66,10 @@
         const fadeout=()=>{
                 fade='fadeout'
         }
+
+        textForm.subscribe(value => {
+                if (value=="") text=""
+	});
 
 </script>
 
