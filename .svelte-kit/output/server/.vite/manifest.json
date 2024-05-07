@@ -62,7 +62,10 @@
     "file": "entries/pages/_layout.js",
     "name": "entries/pages/_layout",
     "src": "src/routes/+layout.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_paths.js"
+    ]
   },
   "src/routes/+layout.svelte": {
     "file": "entries/pages/_layout.svelte.js",
@@ -82,7 +85,10 @@
     "file": "entries/pages/_page.server.js",
     "name": "entries/pages/_page.server",
     "src": "src/routes/+page.server.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_paths.js"
+    ]
   },
   "src/routes/+page.svelte": {
     "file": "entries/pages/_page.svelte.js",
@@ -114,7 +120,10 @@
     "file": "entries/pages/story/_id_/_page.server.js",
     "name": "entries/pages/story/_id_/_page.server",
     "src": "src/routes/story/[id]/+page.server.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_paths.js"
+    ]
   },
   "src/routes/story/[id]/+page.svelte": {
     "file": "entries/pages/story/_id_/_page.svelte.js",
@@ -145,7 +154,10 @@
     "file": "entries/pages/test/_id_/_page.server.js",
     "name": "entries/pages/test/_id_/_page.server",
     "src": "src/routes/test/[id]/+page.server.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_paths.js"
+    ]
   },
   "src/routes/test/[id]/+page.svelte": {
     "file": "entries/pages/test/_id_/_page.svelte.js",

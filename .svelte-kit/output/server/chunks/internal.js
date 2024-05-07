@@ -109,7 +109,7 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8" />\n    <link rel="icon" href="' + assets + '/favicon.png" />\n    <meta name="viewport" content="width=device-width, initial-scale=1" />\n    ' + head + '\n  </head>\n  <body data-sveltekit-preload-data="hover">\n    <div style="display: contents">' + body + '</div>\n  </body>\n</html>\n<style>\n  @font-face {\n    font-family: "malgun";\n    src: url("./public/malgun.tff") format("font-woff2");\n  }\n  body {\n    margin: 0px 0px 0px;\n    font-family: "malgun";\n  }\n  a {\n    text-decoration: none; /* 밑줄 제거 */\n    color: inherit; /* 글자색 상속 */\n  }\n</style>\n',
+    app: ({ head, body, assets, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8" />\n    <link rel="icon" href="' + assets + '/favicon.png" />\n    <meta name="viewport" content="width=device-width, initial-scale=1" />\n    ' + head + '\n  </head>\n  <body data-sveltekit-preload-data="hover">\n    <div style="display: contents">' + body + '</div>\n  </body>\n</html>\n<style>\n  @font-face {\n    font-family: "malgun";\n    src: url("malgun.tff") format("font-woff2");\n  }\n  body {\n    margin: 0px 0px 0px;\n    font-family: "malgun";\n  }\n  a {\n    text-decoration: none; /* 밑줄 제거 */\n    color: inherit; /* 글자색 상속 */\n  }\n</style>\n',
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -181,7 +181,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "16va5f6"
+  version_hash: "wi9m4w"
 };
 async function get_hooks() {
   return {};

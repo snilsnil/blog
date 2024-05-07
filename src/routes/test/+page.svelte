@@ -1,32 +1,20 @@
 <script>
     // @ts-ignore
     import { base } from '$app/paths';
-    const loading=async function(){
-        let json = await (await fetch('https://snilsnil.github.io/blog_json/test.json')).json();
-        json.contant.sort((
-            /** @type {{ count: number; }} */ a, /** @type {{ count: number; }} */ b) =>b.count - a.count);
-        return json
-    }
+    export let data;
 
 </script>
 
 <div class="main">
-    {#await loading()}
-    <!--
-        여기는 파일이 불러올때 띄울 메세지를 적는다
-    -->
-    {:then cont}
-        {#each cont.contant as {id,title, text, type}}
-            {#if (type=="test")}
-                <div class="contant_box">
-                    <img class="imag" src="{base}/icon.png" alt="사진">
-                    <a href="{base}/{type}/{id}" class="title">{title}</a><br>
-                    <p class="text">{text}</p>
-                </div>
-            {/if}
-        {/each}
-    {/await}
-
+    {#each data.json.contant as { id, type, title, text }}
+        {#if type=='test'}
+            <div class="contant_box">
+                <img class="imag" src="{base}/icon.png" alt="사진">
+                <a href="{base}/test/{id}" class="title">{title}</a><br>
+                <p class="text">{text}</p>
+            </div>
+        {/if}
+    {/each}
 </div>
 
 <style>
