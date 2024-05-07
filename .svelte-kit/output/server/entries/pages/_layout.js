@@ -1,5 +1,6 @@
 const prerender = true;
 const trailingSlash = "always";
+const ssr = false;
 async function load({ fetch }) {
   const response = await fetch("https://snilsnil.github.io/blog_json/test.json");
   const json = await response.json();
@@ -9,5 +10,6 @@ async function load({ fetch }) {
 export {
   load,
   prerender,
+  ssr,
   trailingSlash
 };

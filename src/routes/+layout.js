@@ -2,6 +2,7 @@
 // it so that it gets served as a static asset in production
 export const prerender = true;
 export const trailingSlash = 'always';
+export const ssr = false;
 
 export async function load({ fetch }) {
     const response = await fetch('https://snilsnil.github.io/blog_json/test.json');
