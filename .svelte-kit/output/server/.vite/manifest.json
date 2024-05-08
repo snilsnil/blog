@@ -58,10 +58,10 @@
       "_internal.js"
     ]
   },
-  "src/routes/+layout.js": {
-    "file": "entries/pages/_layout.js",
-    "name": "entries/pages/_layout",
-    "src": "src/routes/+layout.js",
+  "src/routes/+layout.server.js": {
+    "file": "entries/pages/_layout.server.js",
+    "name": "entries/pages/_layout.server",
+    "src": "src/routes/+layout.server.js",
     "isEntry": true,
     "imports": [
       "_paths.js"
@@ -74,11 +74,11 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_paths.js",
-      "_index.js"
+      "_index.js",
+      "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.NoLKdpfa.css"
+      "_app/immutable/assets/_layout.DBM-bbNc.css"
     ]
   },
   "src/routes/+page.server.js": {
@@ -100,7 +100,7 @@
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.qwf30EJ5.css"
+      "_app/immutable/assets/_page.CmCvvGLy.css"
     ]
   },
   "src/routes/story/+page.svelte": {
@@ -113,7 +113,7 @@
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CKnFrPaM.css"
+      "_app/immutable/assets/_page.BgeIdpdG.css"
     ]
   },
   "src/routes/story/[id]/+page.server.js": {
@@ -134,7 +134,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Bn63zfL3.css"
+      "_app/immutable/assets/_page.Fi6maGoh.css"
     ]
   },
   "src/routes/test/+page.svelte": {
@@ -147,7 +147,7 @@
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CKnFrPaM.css"
+      "_app/immutable/assets/_page.D1cwKU8-.css"
     ]
   },
   "src/routes/test/[id]/+page.server.js": {
@@ -168,7 +168,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Bn63zfL3.css"
+      "_app/immutable/assets/_page.Fi6maGoh.css"
     ]
   }
 }
