@@ -20,7 +20,8 @@
 
 <div class="main">
     <div class="contant_box">
-        <h1 style="text-align: center;">{title}</h1>
+        <h1 class="title">{title}</h1>
+        <hr />
         <div class="contant_text_container">
             <pre class="contant_text">{@html text}</pre>
         </div>
@@ -38,11 +39,19 @@
         width: 70%;
     }
 
+    .title{
+        font-size: 35px;
+        padding-top: 40px;
+        margin-bottom: 30px;
+        
+    }
+
     .contant_text_container {
         overflow: auto; /* 내용이 넘칠 경우 스크롤 표시 */
     }
 
     .contant_text {
+        font-size: 20px;
         font-family: 'malgun';
         white-space: pre-wrap; /* 줄 바꿈 처리 */
     }

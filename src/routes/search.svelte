@@ -1,18 +1,40 @@
 <script>
-    export let data;
-    // @ts-ignore
+// @ts-nocheck
+
+    import { textForm } from './store.js';
     import { base } from '$app/paths';
+
+    export let data;
+	/**
+   * @type {string}
+   */
+	let dataText;
+	let jsonContent=data.json.contant
+
+	textForm.subscribe(value => {
+        dataText = value;
+	});
+
+	// @ts-ignore
+	function updateText(event) {
+                textForm.set("");
+        }
+	
 </script>
 
 <div class="main">
-
-        {#each data.json.contant as { id, type, title, text }}
+    {#each jsonContent as { id, type, title, text }, i}
+        {#if title.includes(dataText) || text.includes(dataText)}
             <div class="content_box">
                 <img class="image" src="{base}/icon.png" alt="사진">
-                <a href="{base}/{type}/{id}" class="title">{title}</a><br>
+                <a href="{base}/{type}/{id}" on:click={updateText} class="title">{title}</a><br>
                 <p class="text">{text}</p>
             </div>
-        {/each}
+        {/if}
+    {/each}
+    {#if jsonContent.filter(({ title, text }) => title.includes(dataText) || text.includes(dataText)).length === 0}
+        <h1>찾을 수 없습니다.</h1>
+    {/if}
 </div>
 
 <style>

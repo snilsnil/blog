@@ -44,32 +44,49 @@
         import { base } from '$app/paths';
         // @ts-ignore
         import { textForm } from './store.js';
+        import { browser } from '$app/environment';
+
         /**
-   * @type {string}
-   */
+         * @type {string}
+         */
         let fade;
         let text
+        let fadeState=false
 
         
         /**
-   * @param {{ target: { value: string; }; }} event
-   */
+         * @param {{ target: { value: string; }; }} event
+         */
         function updateText(event) {
                 textForm.set(event.target.value)
         }
 
         const fadein=()=>{
                 fade='fadein';
+                fadeState=true
         }
 
         const fadeout=()=>{
                 fade='fadeout'
+                fadeState=false
         }
 
         textForm.subscribe(value => {
                 if (value=="") text=""
 	});
 
+        if(browser){
+                let body=document.body
+                
+                body.addEventListener("keyup", (e) => {
+                        if(e.key=='Escape'&&fadeState==true){
+                                fadeout()
+                        }
+                        else if(e.key=='Escape'&&fadeState==false){
+                                fadein()
+                        }
+                });
+        }
 </script>
 
 <style>
