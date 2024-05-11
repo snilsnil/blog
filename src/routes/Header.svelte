@@ -16,23 +16,20 @@
 	</div>
 </div>
 <div  class="{fade} category">
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-			<p class="close" on:click={fadeout}>닫기</p>
-			<div>
-					<a href="{base}">
-							메인
-					</a><br>
-			</div>
-			<div>
-					<a href="{base}/story">
-							스토리
-					</a><br>
-			</div>
-			<div>
-					<a href="{base}/test">
-							테스트
-					</a><br>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+	<p class="close" on:click={fadeout}>닫기</p>
+	<div>
+		<a href="{base}">메인</a><br>
+	</div>
+	<div>
+		<a href="{base}/story">스토리</a><br>
+	</div>
+	<div>
+		<a href="{base}/test">테스트</a><br>
+	</div>
+        <div>
+		<a href="{base}/justChat">잡담</a><br>
 	</div>
 </div>
 

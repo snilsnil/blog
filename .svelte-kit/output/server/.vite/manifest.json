@@ -103,6 +103,40 @@
       "_app/immutable/assets/_page.CmCvvGLy.css"
     ]
   },
+  "src/routes/justChat/+page.svelte": {
+    "file": "entries/pages/justChat/_page.svelte.js",
+    "name": "entries/pages/justChat/_page.svelte",
+    "src": "src/routes/justChat/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_paths.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.BgeIdpdG.css"
+    ]
+  },
+  "src/routes/justChat/[id]/+page.server.js": {
+    "file": "entries/pages/justChat/_id_/_page.server.js",
+    "name": "entries/pages/justChat/_id_/_page.server",
+    "src": "src/routes/justChat/[id]/+page.server.js",
+    "isEntry": true,
+    "imports": [
+      "_paths.js"
+    ]
+  },
+  "src/routes/justChat/[id]/+page.svelte": {
+    "file": "entries/pages/justChat/_id_/_page.svelte.js",
+    "name": "entries/pages/justChat/_id_/_page.svelte",
+    "src": "src/routes/justChat/[id]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.Fi6maGoh.css"
+    ]
+  },
   "src/routes/story/+page.svelte": {
     "file": "entries/pages/story/_page.svelte.js",
     "name": "entries/pages/story/_page.svelte",
