@@ -134,7 +134,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Fi6maGoh.css"
+      "_app/immutable/assets/_page.CeAGyePF.css"
     ]
   },
   "src/routes/story/+page.svelte": {
@@ -168,7 +168,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Fi6maGoh.css"
+      "_app/immutable/assets/_page.CeAGyePF.css"
     ]
   },
   "src/routes/test/+page.svelte": {
@@ -202,7 +202,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Fi6maGoh.css"
+      "_app/immutable/assets/_page.CeAGyePF.css"
     ]
   }
 }

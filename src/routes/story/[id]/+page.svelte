@@ -54,6 +54,7 @@
         font-size: 20px;
         font-family: 'malgun';
         white-space: pre-wrap; /* 줄 바꿈 처리 */
+        line-height: 35px;
     }
 </style>
 
