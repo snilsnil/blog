@@ -10,7 +10,7 @@
         {#if type=='test'}
             <div class="contant_box">
                 <img class="image" src="{base}/icon.png" alt="사진">
-                <a href="{base}/test/{id}" class="title">{title}</a><br>
+                <a href="{base}/{type}/{id}" class="title">{title}</a><br>
                 <p class="text">{text}</p>
             </div>
         {/if}
