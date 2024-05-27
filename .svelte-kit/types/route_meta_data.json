@@ -11,6 +11,10 @@
 		"src/routes/justChat/[id]/+page.server.js",
 		"src/routes/+layout.server.js"
 	],
+	"/search/[slug]": [
+		"src/routes/search/[slug]/+page.server.js",
+		"src/routes/+layout.server.js"
+	],
 	"/story": [
 		"src/routes/+layout.server.js"
 	],

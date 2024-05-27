@@ -7,12 +7,12 @@
 	</div>
 
 	<div class="nav">
-			<input class="github_snilsnil" type="image" on:click={()=>{
-			window.location.href="https://github.com/snilsnil";
-			}} src="{base}/github.png" alt="깃허브">
+		<input class="github_snilsnil" type="image" on:click={getGithub} src="{base}/github.png" alt="깃허브">
 
-			<input class="search_text" type="text"  bind:value={text} on:input={updateText} placeholder="search" >
-                        <!-- on:keypress={keyPress} -->
+		<input class="search_text" type="text"  bind:value={text} on:keypress={updateText} placeholder="검색" >
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+                <img class='search' src='{base}/search.png' alt='검색' on:click={getSearch}>
 	</div>
 </div>
 <div  class="{fade} category">
@@ -39,8 +39,6 @@
 
         // let rootpath='/testblog/'
         import { base } from '$app/paths';
-        // @ts-ignore
-        import { textForm } from './store.js';
         import { browser } from '$app/environment';
 
         /**
@@ -55,7 +53,7 @@
          * @param {{ target: { value: string; }; }} event
          */
         function updateText(event) {
-                textForm.set(event.target.value)
+                if(event.key=='Enter') return location.href=`/search/${text}`;
         }
 
         const fadein=()=>{
@@ -68,9 +66,13 @@
                 fadeState=false
         }
 
-        textForm.subscribe(value => {
-                if (value=="") text=""
-	});
+        const getSearch=()=>{
+                return location.href=`/search/${text}`;
+        }
+
+        const getGithub=()=>{
+                return location.href="https://github.com/snilsnil";
+        }
 
         if(browser){
                 let body=document.body
@@ -167,6 +169,13 @@ height: 48px;
 border:0em;
 width: 50px;
 height: 50px;
+}
+
+.search{
+vertical-align: 30%;
+border:0em;
+width: 30px;
+height: 30px;
 }
 
 .github_snilsnil{

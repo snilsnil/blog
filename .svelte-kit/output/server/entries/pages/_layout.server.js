@@ -1,6 +1,5 @@
 import { b as base } from "../../chunks/paths.js";
 const prerender = true;
-const trailingSlash = "always";
 const ssr = true;
 async function load({ fetch }) {
   const response = await fetch(`${base}/data.json`);
@@ -11,6 +10,5 @@ async function load({ fetch }) {
 export {
   load,
   prerender,
-  ssr,
-  trailingSlash
+  ssr
 };
