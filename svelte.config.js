@@ -12,7 +12,7 @@ const config = {
 			relative: false
 		},
 		prerender: {
-			entries: ["*", "/test/[id]/", "/story/[id]/", "/search/[id]/"]
+			entries: ["*", "/test/[id]/", "/story/[id]/"]
 		},
 	}
 };

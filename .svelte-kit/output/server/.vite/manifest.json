@@ -13,6 +13,13 @@
     "file": "chunks/exports.js",
     "name": "exports"
   },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
   "_internal.js": {
     "file": "chunks/internal.js",
     "name": "internal",
@@ -47,7 +54,7 @@
     "imports": [
       "_paths.js",
       "_exports.js",
-      "_ssr.js",
+      "_index.js",
       "_internal.js"
     ]
   },
@@ -67,10 +74,11 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
+      "_index.js",
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.D39DPtt9.css"
+      "_app/immutable/assets/_layout.DCDdQ1JD.css"
     ]
   },
   "src/routes/+page.server.js": {
@@ -127,25 +135,6 @@
     ],
     "css": [
       "_app/immutable/assets/_page.CeAGyePF.css"
-    ]
-  },
-  "src/routes/search/[slug]/+page.server.js": {
-    "file": "entries/pages/search/_slug_/_page.server.js",
-    "name": "entries/pages/search/_slug_/_page.server",
-    "src": "src/routes/search/[slug]/+page.server.js",
-    "isEntry": true
-  },
-  "src/routes/search/[slug]/+page.svelte": {
-    "file": "entries/pages/search/_slug_/_page.svelte.js",
-    "name": "entries/pages/search/_slug_/_page.svelte",
-    "src": "src/routes/search/[slug]/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_paths.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.CcPMOqg_.css"
     ]
   },
   "src/routes/story/+page.svelte": {
